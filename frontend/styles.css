@@ -23,6 +23,15 @@ a:hover {
 	color: #50d6ff;
 }
 
+.alert{
+	background-color: #f05f5f;
+	color: white;
+	padding: 0.5em;
+	border-radius: 0.5em;
+	margin-bottom: 0.5em;
+	font-size: small;
+}
+
 .subtitle {
 	color: #616161;
 	margin-bottom: 0.6em;
