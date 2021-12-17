@@ -23,13 +23,15 @@ a:hover {
 	color: #50d6ff;
 }
 
-.alert{
+.alert {
 	background-color: #f05f5f;
 	color: white;
 	padding: 0.5em;
 	border-radius: 0.5em;
+	margin: 0;
 	margin-bottom: 0.5em;
 	font-size: small;
+	display: none;
 }
 
 .subtitle {
@@ -85,4 +87,21 @@ a:hover {
 
 #btn:active {
 	background-color: #006381;
+}
+
+@media (max-width: 834px) {
+	.container {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	#url {
+		width: 100%;
+	}
+
+	#btn {
+		align-self: center;
+		margin-top: 0.5em;
+	}
 }
