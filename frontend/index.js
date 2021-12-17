@@ -10,7 +10,7 @@ btn.addEventListener('click', () => {
     result.style.display = 'none'
     loader.style.display = 'block'
     if (/(^https?:\/\/.)|(^www\..)|(^[A-Za-z]+\..)/.test(url)) {
-        fetch('http://localhost:5000/shorten', { method: 'POST', body: JSON.stringify({ url: url }), headers: { 'Content-Type': 'application/json' } })
+        fetch('https://url-shortener-abel.herokuapp.com/shorten', { method: 'POST', body: JSON.stringify({ url: url }), headers: { 'Content-Type': 'application/json' } })
             .then(data => data.json()).then(data => {
                 btn.disabled = false
                 const shortUrl = document.getElementById('shortURL')
