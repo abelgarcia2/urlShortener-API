@@ -1,5 +1,4 @@
 import URL from "../models/URL.js";
-import mongoose from 'mongoose'
 import { nanoid } from "nanoid";
 
 export const shortLink = async (req, res) => {
