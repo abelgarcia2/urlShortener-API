@@ -1,13 +1,13 @@
-import pkg from "mongoose"
-const { Schema, model } = pkg
+import pkg from 'mongoose';
+const {Schema, model} = pkg;
 
 const URLSchema = new Schema({
-    url: String,
-    code: String
+  url: String,
+  code: String,
 },
-    {
-        versionKey: false
-    }
-)
+{
+  versionKey: false,
+},
+);
 
-export default model("URL", URLSchema)
+export default model('URL', URLSchema);

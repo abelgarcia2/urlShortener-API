@@ -1,0 +1,20 @@
+{
+    "extends": "google",
+    "rules": {
+        "max-len": [
+            2,
+            {
+                "code": 120
+            }
+        ],
+        "require-jsdoc": 0
+    },
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "env": {
+        "node": true,
+        "es6": true
+    }
+}

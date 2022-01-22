@@ -6,7 +6,8 @@
 	"main": "app.js",
 	"scripts": {
 		"test": "jest --collectCoverage --silent --testPathPattern=/src/test --maxWorkers=1, --forceExit --passWithNoTests",
-		"start": "nodemon src/app.js"
+		"start": "nodemon src/app.js",
+		"lint": "eslint ."
 	},
 	"jest": {
 		"verbose": true,
@@ -33,6 +34,7 @@
 	"dependencies": {
 		"@babel/plugin-transform-modules-commonjs": "^7.16.8",
 		"@types/supertest": "^2.0.11",
+		"eslint-config-google": "^0.14.0",
 		"express": "^4.17.1",
 		"jest": "^27.4.7",
 		"mongoose": "^6.1.6",

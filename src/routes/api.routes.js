@@ -1,11 +1,11 @@
-import { Router } from "express";
-import * as apiCtrl from '../controllers/short.controller.js'
+import {Router} from 'express';
+import * as apiCtrl from '../controllers/short.controller.js';
 
-const router = Router()
+const router = new Router();
 
 
-router.post("/shorten", apiCtrl.shortLink)
-router.get("/:id", apiCtrl.getShortLink)
+router.post('/shorten', apiCtrl.shortLink);
+router.get('/:id', apiCtrl.getShortLink);
 
-export default router
+export default router;
 
