@@ -13,7 +13,7 @@ test('POST /shorten', async () => {
 });
 
 test('GET /:id', async () => {
-  await api.get('/WlcxS')
+  await api.get('/7w0ll')
       .expect(302);
   await api.get('/aaaa')
       .expect(404);
