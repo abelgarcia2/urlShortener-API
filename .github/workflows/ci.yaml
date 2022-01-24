@@ -1,0 +1,19 @@
+name: Lint
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v1
+      - name: Push to server
+      - uses: appleboy/ssh-action@master
+      with:
+        host: projectsserver.ddns.net
+        username: ${{secrets.SERVER_USERNAME}}
+        password: ${{secrets.SERVER_PASS}}
+        script: cd ${{secrets.PROJECT_PATH}} && git pull && npm i && pm2 restart all && sudo systemctl restart nginx        
