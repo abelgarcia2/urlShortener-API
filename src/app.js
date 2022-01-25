@@ -1,8 +1,9 @@
 import express from 'express';
 import morgan from 'morgan';
+import cors from 'cors'
 
 import apiRoutes from './routes/api.routes.js';
-import {PORT} from './config.js';
+import { PORT } from './config.js';
 import './db.js';
 
 
@@ -10,8 +11,9 @@ const app = express();
 
 app.use(express.json());
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
+app.use(cors())
 
-app.get('/', (req, res) => res.json({'msg': 'Welcome to shortLink'}));
+app.get('/', (req, res) => res.json({ 'msg': 'Welcome to shortLink' }));
 
 app.use('/', apiRoutes);
 

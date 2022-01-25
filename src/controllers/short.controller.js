@@ -1,12 +1,13 @@
 import URL from '../models/URL.js';
-import {nanoid} from 'nanoid';
+import { nanoid } from 'nanoid';
 
 export const shortLink = async (req, res) => {
-  const {url} = req.body;
+  const { url } = req.body;
+  console.log(req.body);
 
-  const findURL = await URL.findOne({url});
+  const findURL = await URL.findOne({ url });
   if (findURL) {
-    res.status(200).json({'shortURL': 'http://localhost/' + findURL.code});
+    res.status(200).json({ 'shortURL': 'http://localhost/' + findURL.code });
   } else {
     const code = nanoid(5);
     const newURL = new URL({
@@ -14,12 +15,12 @@ export const shortLink = async (req, res) => {
       code,
     });
     await newURL.save();
-    res.status(200).json({'shortURL': 'http://localhost/' + code});
+    res.status(200).json({ 'shortURL': 'http://localhost/' + code });
   }
 };
 
 export const getShortLink = async (req, res) => {
-  const code = await URL.findOne({code: req.params.id});
+  const code = await URL.findOne({ code: req.params.id });
 
   if (code != null) {
     res.redirect(code.url);
