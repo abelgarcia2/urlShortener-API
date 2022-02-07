@@ -3,11 +3,10 @@ import { nanoid } from 'nanoid';
 
 export const shortLink = async (req, res) => {
   const { url } = req.body;
-  console.log(req.body);
 
   const findURL = await URL.findOne({ url });
   if (findURL) {
-    res.status(200).json({ 'shortURL': 'http://localhost/' + findURL.code });
+    res.status(200).json({ 'code': findURL.code });
   } else {
     const code = nanoid(5);
     const newURL = new URL({
@@ -15,7 +14,7 @@ export const shortLink = async (req, res) => {
       code,
     });
     await newURL.save();
-    res.status(200).json({ 'shortURL': 'http://localhost/' + code });
+    res.status(200).json({ 'codeu': code });
   }
 };
 
