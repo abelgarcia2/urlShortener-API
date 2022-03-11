@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import {MONGODB_URI} from './config.js';
+import 'dotenv/config'
 
-mongoose.connect(MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI)
     .then((db) => console.log('DB is connected'))
     .catch((error) => console.error(error));
