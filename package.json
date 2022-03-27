@@ -6,7 +6,7 @@
 	"main": "app.js",
 	"scripts": {
 		"test": "jest --collectCoverage --silent --testPathPattern=/src/test --maxWorkers=1, --forceExit --passWithNoTests",
-		"start": "nodemon src/app.js",
+		"start": "node src/app.js",
 		"lint": "eslint ."
 	},
 	"jest": {
