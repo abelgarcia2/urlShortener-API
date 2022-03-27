@@ -28,7 +28,7 @@ export const shortLink = async (req, res) => {
 
 export const getShortLink = async (req, res) => {
   const code = await URL.findOne({ code: req.params.id });
-
+ 
   if (code != null) {
     res.redirect(code.url);
   } else {

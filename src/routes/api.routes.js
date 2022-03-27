@@ -8,4 +8,3 @@ router.post('/shorten', apiCtrl.shortLink);
 router.get('/:id', apiCtrl.getShortLink);
 
 export default router;
-
