@@ -6,19 +6,7 @@
 	"main": "app.js",
 	"scripts": {
 		"test": "jest --collectCoverage --silent --testPathPattern=/src/test --maxWorkers=1, --forceExit --passWithNoTests",
-		"start": "node src/app.js",
-		"lint": "eslint ."
-	},
-	"jest": {
-		"verbose": true,
-		"roots": [
-			"<rootDir>/src/",
-			"<rootDir>/src/test"
-		]
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/abelgarcia2/urlShortener-API.git"
+		"start": "node src/app.js"
 	},
 	"keywords": [
 		"short",
@@ -32,11 +20,8 @@
 		"nodemon": "^2.0.15"
 	},
 	"dependencies": {
-		"@babel/plugin-transform-modules-commonjs": "^7.16.8",
-		"@types/supertest": "^2.0.11",
 		"cors": "^2.8.5",
 		"dotenv": "^16.0.0",
-		"eslint-config-google": "^0.14.0",
 		"express": "^4.17.1",
 		"jest": "^27.4.7",
 		"joi": "^17.6.0",
